@@ -73,6 +73,11 @@ mac:{
     }
 }
 
+# NmcRpc
+##LIBS += -L$${SOLUTION_DIR}nmcrpc -lnmcrpc
+
+# JsonCpp
+LIBS += -L$${SOLUTION_DIR}jsoncpp -ljsoncpp
 
 #-------------------------------------------------
 # Linked Libs

@@ -1,47 +1,39 @@
 #-------------------------------------------------
 #
-# Bitcoin API Project File
+# Moneychanger Project File
 #
 #-------------------------------------------------
 
 TEMPLATE    = lib
-CONFIG     += precompile_header
 CONFIG     += staticlib
 
-TARGET      = bitcoin-api
-#VERSION     = 0.0.1
-
-win32:DEFINES += "CURL_STATICLIB=1"
+TARGET      = nmcrpc
+#VERSION     =
 
 #-------------------------------------------------
 # Common Settings
 
 include(../common.pri)
 
+
 #-------------------------------------------------
 # Source
 
-include($${SOLUTION_DIR}../src/bitcoin-api/bitcoin-api.pri)
+include($${SOLUTION_DIR}../src/nmcrpc/nmcrpc.pri)
 
 
 #-------------------------------------------------
 # Include
 
-INCLUDEPATH += $${SOLUTION_DIR}../src/bitcoin-api
 INCLUDEPATH += $${SOLUTION_DIR}../src/jsoncpp
-INCLUDEPATH += $${SOLUTION_DIR}../src/curl/include
 
 
 #-------------------------------------------------
 # Options
 
-win32:{
-    DEFINES     += "_UNICODE=1"
-    CharacterSet = 1
-}
+# uncomment one of the following two lines you might get lucky:
+##QMAKE_CXXFLAGS += -std=c++11
+QMAKE_CXXFLAGS += -std=c++0x
+##DEFINES += OT_USE_TR1
 
-#-------------------------------------------------
-# Package Config
-unix:{
-    PKGCONFIG += opentxs
-}
+QMAKE_CXXFLAGS += -pedantic
