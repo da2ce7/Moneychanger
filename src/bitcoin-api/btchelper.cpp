@@ -7,6 +7,10 @@
 #include <cstdio>
 #include <string>
 
+#ifndef _WIN32
+    #include <stdint.h>
+#endif
+
 #ifndef OT_USE_TR1
     #include <thread>   // for sleep()
 #else

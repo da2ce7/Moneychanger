@@ -252,7 +252,7 @@ BtcRpcPacket::BtcRpcPacket(const char *data, int size)
         return;
     }
 
-    _memccpy(this->data, data, 0, size);
+    memccpy(this->data, data, 0, size);
     this->dataSize = size;
     this->pointerOffset = 0;
     this->data[this->dataSize] = '\0';
@@ -267,7 +267,7 @@ BtcRpcPacket::BtcRpcPacket(const std::string &data)
         return;
     }
 
-    _memccpy(this->data, data.c_str(), 0, data.size());
+    memccpy(this->data, data.c_str(), 0, data.size());
     this->dataSize = data.size();
     this->pointerOffset = 0;
     this->data[this->dataSize] = '\0';
@@ -288,7 +288,7 @@ BtcRpcPacket::BtcRpcPacket(const BtcRpcPacketPtr packet)
         return;
     }
 
-    _memccpy(this->data, packet->data, 0, packet->dataSize);
+    memccpy(this->data, packet->data, 0, packet->dataSize);
     this->dataSize = packet->dataSize;
     this->pointerOffset = 0;
     this->data[this->dataSize] = '\0';
