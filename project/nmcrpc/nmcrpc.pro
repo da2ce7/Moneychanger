@@ -29,11 +29,8 @@ INCLUDEPATH += $${SOLUTION_DIR}../src/jsoncpp
 
 
 #-------------------------------------------------
-# Options
+# Package Config
+unix:{
+    PKGCONFIG += libidn
+}
 
-# uncomment one of the following two lines you might get lucky:
-##QMAKE_CXXFLAGS += -std=c++11
-QMAKE_CXXFLAGS += -std=c++0x
-##DEFINES += OT_USE_TR1
-
-QMAKE_CXXFLAGS += -pedantic
