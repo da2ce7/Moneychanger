@@ -6,32 +6,41 @@
 //  Copyright (c) 2013 Monetas. All rights reserved.
 //
 
-#include "stdafx.h"
-
-#include <OTStorage.h>
-
-#include <OTString.h>
-#include <OTIdentifier.h>
-#include <OTASCIIArmor.h>
-#include <OTAccount.h>
-#include <OTLedger.h>
-#include <OTTransaction.h>
-#include <OTPaymentPlan.h>
-#include <OTWallet.h>
-#include <OTIdentifier.h>
-#include <OTPayment.h>
+#ifndef STABLE_H
+#include <core/stable.hpp>
+#endif
 
 
 #ifdef _WIN32
-#include <otapi/OpenTransactions.h>
-#include <otapi/OTAPI.h>
-#include <otapi/OT_ME.h>
-#include <otlib/OTLog.h>
+#include <otapi/OpenTransactions.hpp>
+#include <otapi/OT_ME.hpp>
+#include <otapi/OTAPI.hpp>
+#include <otlib/OTAccount.hpp>
+#include <otlib/OTASCIIArmor.hpp>
+#include <otlib/OTIdentifier.hpp>
+#include <otlib/OTLedger.hpp>
+#include <otlib/OTLog.hpp>
+#include <otlib/OTPayment.hpp>
+#include <otlib/OTPaymentPlan.hpp>
+#include <otlib/OTStorage.hpp>
+#include <otlib/OTString.hpp>
+#include <otlib/OTTransaction.hpp>
+#include <otlib/OTWallet.hpp>
 #else
-#include <opentxs/OpenTransactions.h>
-#include <opentxs/OTAPI.h>
-#include <opentxs/OT_ME.h>
-#include <opentxs/OTLog.h>
+#include <opentxs/OpenTransactions.hpp>
+#include <opentxs/OT_ME.hpp>
+#include <opentxs/OTAPI.hpp>
+#include <opentxs/OTAccount.hpp>
+#include <opentxs/OTASCIIArmor.hpp>
+#include <opentxs/OTIdentifier.hpp>
+#include <opentxs/OTLedger.hpp>
+#include <opentxs/OTLog.hpp>
+#include <opentxs/OTPayment.hpp>
+#include <opentxs/OTPaymentPlan.hpp>
+#include <opentxs/OTStorage.hpp>
+#include <opentxs/OTString.hpp>
+#include <opentxs/OTTransaction.hpp>
+#include <opentxs/OTWallet.hpp>
 #endif
 
 #include "MTRecord.hpp"

@@ -1,8 +1,18 @@
+#ifndef STABLE_H
+#include <core/stable.hpp>
+#endif
+
 #include "widgets/btcguitest.h"
 #include "ui_btcguitest.h"
 #include "modules.h"
 #include "btctest.h"
-#include <OTLog.h>
+
+#ifdef _WIN32
+#include <otlib/OTLog.hpp>
+#else
+#include <opentxs/OTLog.hpp>
+#endif
+
 
 BtcGuiTest::BtcGuiTest(QWidget *parent) :
     QWidget(parent, Qt::Window),

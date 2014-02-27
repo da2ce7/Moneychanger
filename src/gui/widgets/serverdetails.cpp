@@ -1,5 +1,5 @@
 #ifndef STABLE_H
-#include <core/stable.h>
+#include <core/stable.hpp>
 #endif
 
 #include <QDebug>
@@ -18,11 +18,11 @@
 #include "detailedit.h"
 
 #ifdef _WIN32
-#include <otapi/OTAPI.h>
-#include <otapi/OT_ME.h>
+#include <otapi/OTAPI.hpp>
+#include <otapi/OT_ME.hpp>
 #else
-#include <opentxs/OTAPI.h>
-#include <opentxs/OT_ME.h>
+#include <opentxs/OTAPI.hpp>
+#include <opentxs/OT_ME.hpp>
 #endif
 
 

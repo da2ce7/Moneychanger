@@ -1,8 +1,8 @@
 #ifndef STABLE_H
-#include <core/stable.h>
+#include <core/stable.hpp>
 #endif
 
-#include <OTPaths.h>
+#include <opentxs/OTPaths.hpp>
 
 #include "DBHandler.h"
 #include <QDebug>

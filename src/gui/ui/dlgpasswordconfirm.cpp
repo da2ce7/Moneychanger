@@ -1,14 +1,14 @@
 #ifndef STABLE_H
-#include <core/stable.h>
+#include <core/stable.hpp>
 #endif
 
 #include "dlgpasswordconfirm.h"
 #include "ui_dlgpasswordconfirm.h"
 
 #ifdef _WIN32
-#include <otlib/OTPassword.h>
+#include <otlib/OTPassword.hpp>
 #else
-#include <opentxs/OTPassword.h>
+#include <opentxs/OTPassword.hpp>
 #endif
 
 #include "overridecursor.h"

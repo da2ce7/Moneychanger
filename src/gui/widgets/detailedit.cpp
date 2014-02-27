@@ -1,5 +1,5 @@
 #ifndef STABLE_H
-#include <core/stable.h>
+#include <core/stable.hpp>
 #endif
 
 #include <QDebug>
@@ -27,8 +27,15 @@
 
 #include "moneychanger.h"
 
-#include <OTStorage.h>
-#include <OTLog.h>
+
+#ifdef _WIN32
+#include <otlib/OTStorage.hpp>
+#include <otlib/OTLog.hpp>
+#else
+#include <opentxs/OTStorage.hpp>
+#include <opentxs/OTLog.hpp>
+#endif
+
 
 MTDetailEdit::MTDetailEdit(QWidget *parent) :
     QWidget(parent, Qt::Window),

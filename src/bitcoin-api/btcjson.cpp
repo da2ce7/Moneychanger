@@ -5,7 +5,6 @@
 
 #include "btcjson.h"
 #include <json/json.h>
-//#include <OTLog.h>
 #include <iostream>
 #include <map>
 #include <cstdio>

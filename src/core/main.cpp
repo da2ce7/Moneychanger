@@ -1,5 +1,5 @@
 #ifndef STABLE_H
-#include <core/stable.h>
+#include <core/stable.hpp>
 #endif
 
 #include <QApplication>
@@ -19,16 +19,16 @@
 #include "passwordcallback.h"
 
 #ifdef _WIN32
-#include <otapi/OTAPI.h>
-#include <otapi/OT_ME.h>
-#include <otlib/OTLog.h>
+#include <otapi/OTAPI.hpp>
+#include <otapi/OT_ME.hpp>
+#include <otlib/OTLog.hpp>
 #include <otlib/OTPaths.h>
 #include <otlib/OTPassword.h>
 #include <otlib/OTAsymmetricKey.h>
 #else
-#include <opentxs/OTAPI.h>
-#include <opentxs/OT_ME.h>
-#include <opentxs/OTLog.h>
+#include <opentxs/OTAPI.hpp>
+#include <opentxs/OT_ME.hpp>
+#include <opentxs/OTLog.hpp>
 #include <opentxs/OTPaths.h>
 #include <opentxs/OTPassword.h>
 #include <opentxs/OTAsymmetricKey.h>

@@ -1,11 +1,16 @@
 #ifndef STABLE_H
-#include <core/stable.h>
+#include <core/stable.hpp>
 #endif
 
 #include "sampleescrowclient.h"
 #include "modules.h"
 #include "sampleescrowserver.h"
-#include <OTLog.h>
+
+#ifdef _WIN32
+#include <otlib/OTLog.hpp>
+#else
+#include <opentxs/OTLog.hpp>
+#endif
 
 
 SampleEscrowClient::SampleEscrowClient(QObject* parent)

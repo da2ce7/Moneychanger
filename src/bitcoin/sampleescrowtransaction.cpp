@@ -1,10 +1,15 @@
 #ifndef STABLE_H
-#include <core/stable.h>
+#include <core/stable.hpp>
 #endif
 
 #include "sampleescrowtransaction.h"
 #include "modules.h"
-#include <OTLog.h>
+
+#ifdef _WIN32
+#include <otlib/OTLog.hpp>
+#else
+#include <opentxs/OTLog.hpp>
+#endif
 
 SampleEscrowTransaction::SampleEscrowTransaction(int64_t amountToSend)
 {
